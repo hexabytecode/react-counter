@@ -5,8 +5,8 @@ import Counter from "./Counter";
 function App() {
   return (
     <div>
-      <Counter />
-      <Counter />
+      <Counter diff={1} />
+      <Counter diff={10} />
     </div>
   );
 }

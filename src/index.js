@@ -1,28 +1,15 @@
-import "./index.css";
-import React, { useState } from "react";
-import ReactDOM from "react-dom/client";
+import React from "react";
+import ReactDOM from "react-dom";
+import Counter from "./Counter";
 
-function Counter() {
-  const [count, setCount] = useState(0);
-
-  function handleIncrement(e) {
-    e.preventDefault();
-    setCount(count + 1);
-  }
-
-  function handleDecrement(e) {
-    e.preventDefault();
-    setCount(count - 1);
-  }
-
+function App() {
   return (
     <div>
-      <h1>{count}</h1>
-      <button onClick={handleIncrement}>+</button>
-      <button onClick={handleDecrement}>-</button>
+      <Counter />
+      <Counter />
     </div>
   );
 }
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<Counter />);
+root.render(<App />);
